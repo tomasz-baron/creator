@@ -1,0 +1,45 @@
+@import "./../common/style.scss";
+
+.user-group-content {
+    padding: 3px 26px 0px 22px;
+    height: 100%;
+
+    .user-group-title {
+        font-size: 23px;
+        margin-bottom: 7px;
+    }
+
+    .user-group-label {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        color: $main-font-color;
+        letter-spacing: 2px;
+        margin-right: 15px;
+    }
+
+    .user-group-description {
+        font-size: 15px;
+    }
+
+    .groups-select {
+        height: 44px;
+        width: 100%;
+        background: #fff;
+        padding: 8px 10px 10px 7px;
+        border: 1px solid $input-border-color;
+        border-radius: 3px;
+        font-size: 17px;
+        font-weight: bold;
+        margin-top: 2px;
+
+        option {
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            appearance:none;
+            padding: 12px 10px 12px 10px;
+            height: 30px;
+            font-size: 13px;
+        }
+    }
+}

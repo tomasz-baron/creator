@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <span>Avatar</span>
+</div>
+<div class="modal-body">
+    <div class="description">
+        User Avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.
+    </div>
+    <div class="file-picker">
+        <input type="file" name="avatar" id="avatar" image-source="$ctrl.avatar" class="input-avatar" accept=".png,.jpg,.jpeg">
+        <label for="avatar">Choose File</label>
+        <span class="file-name">No File Chosen</span>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="button-upload" type="button" ng-click="$ctrl.saveAvatar()" ng-disabled="!$ctrl.avatar">Upload</button>
+    <button class="button-cancel" type="button" ng-click="$ctrl.closeModal()">Cancel</button>
+</div>

@@ -1,0 +1,34 @@
+$main-font-color: #5b6883;
+$grey-font-color: #acacac;
+$modal-font-color: #676767;
+$input-border-color: #d2d6dd;
+$invalid-border: #c50000;
+$line-shadow: 0 4px 4px -3px #efefef;
+
+$next-button-background: #1b87ff;
+$next-button-text-color: #fff;
+
+$cancel-button-background: #fefefe;
+$cancel-button-border-color: #cbd0d8;
+$cancel-button-text-color: #666666;
+
+
+@mixin cancel-button() {
+    border: 1px solid $cancel-button-border-color;
+    background-color: $cancel-button-background;
+    color: $cancel-button-text-color;
+
+    &:hover:not(:disabled) {
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+@mixin confirm-button() {
+    border: none;
+    background-color: $next-button-background;
+    color: $next-button-text-color;
+
+    &:hover:not(:disabled) {
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    }
+}

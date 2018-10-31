@@ -1,0 +1,15 @@
+@import "./../common/style.scss";
+
+.summary-container {
+    height: 100%;
+    padding: 5px 15px;
+
+    .details-label {
+        color: $grey-font-color;
+    }
+
+    .avatar-preview-container {
+        margin-top: 2px;
+        margin-left: 0;
+    }
+}

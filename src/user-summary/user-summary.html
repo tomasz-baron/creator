@@ -1,0 +1,15 @@
+<div class="ui-view-content">
+    <div class="summary-container">
+        <label for="email" class="details-label">Email</label>
+        <input name="email" type="email" class="details-input" ng-model="$ctrl.userData.details.email" disabled>
+        <label for="userGroup" class="details-label">User group</label>
+        <input name="userGroup" type="text" class="details-input" ng-model="$ctrl.userData.userGroup.name" disabled>
+        <label for="avatarPreview" class="details-label">Avatar</label>
+        <div class="avatar-preview-container">
+            <img name="avatarPreview" class="avatar-preview" id="avatar-preview">
+        </div>
+    </div>
+    <footer>
+        <buttons-footer></buttons-footer>
+    </footer>
+</div>

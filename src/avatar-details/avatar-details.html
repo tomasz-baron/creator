@@ -1,0 +1,15 @@
+<div class="ui-view-content">
+    <div class="avatar-details-content">
+        <div>
+            <span class="avatar-title">Avatar</span>
+            <span class="avatar-description">User Avatar. It is recommendeed that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.</span>
+        </div>
+        <div class="avatar-preview-container" ng-show="$ctrl.avatar">
+            <img class="avatar-preview" id="avatar-preview">
+        </div>
+        <button class="open-button" ng-click="$ctrl.openUploadModal()">Upload Avatar</button>
+    </div>
+    <footer>
+        <buttons-footer next-state="userSummary" disabled="!$ctrl.avatar"></buttons-footer>
+    </footer>
+</div>

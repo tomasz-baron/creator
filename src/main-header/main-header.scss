@@ -1,0 +1,20 @@
+@import "./../common/style.scss";
+
+.header-content {
+    background-color: #fff;
+    box-shadow: $line-shadow;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 17px 0 25px 14px;
+    display: flex;
+
+    .logo {
+        height: 32px;
+        margin-right: 15px;
+    }
+
+    .title {
+        font-size: 21px;
+        color: $main-font-color;
+        margin-top: 3px;
+    }
+}

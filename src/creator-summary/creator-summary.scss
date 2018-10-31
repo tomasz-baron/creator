@@ -1,0 +1,27 @@
+.aside-summary {
+    background-image: url("../../img/app-icon.png");
+    background-size: 347px 347px;
+    background-repeat: no-repeat;
+    background-position: 38px 95%;
+    height: 100%;
+    padding: 40px 26px;
+    box-sizing: border-box;
+    
+    .step {
+        margin-bottom: 15px;
+        font-size: 17px;
+
+        .dot {
+            height: 9px;
+            width: 9px;
+            background-color: #a0a0a0;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 15px;
+
+            &.active {
+                background-color: #7dd96e;
+            }
+        }
+    }
+}

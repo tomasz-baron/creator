@@ -1,0 +1,84 @@
+@import "./../../common/style.scss";
+
+.modal-dialog {
+    width: 500px;
+    height: 290px;
+    margin-top: 70px;
+
+    .modal-content {
+        height: 290px;
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.2);
+        box-shadow: 0 5px 15px rgba(0,0,0,.2);
+        border: none;
+
+        .modal-header {
+            height: 77px;
+            font-size: 20px;
+            padding: 23px 10px 10px 28px;
+            box-shadow: $line-shadow;
+            border: 1px solid #d8d8d8;
+        }
+        
+        .modal-body {
+            height: 147px;
+            padding: 32px 28px 10px 28px;
+
+            .description {
+                line-height: 18px;
+                font-size: 14px;
+                color: $modal-font-color;
+            }
+
+            .file-picker {
+                margin-top: 14px;
+
+                .file-name {
+                    color: $modal-font-color;
+                }
+
+                .input-avatar {
+                    width: 0.1px;
+                    height: 0.1px;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: -1;
+                }
+                
+                .input-avatar + label {
+                    @include cancel-button;
+                    padding: 2px 15px 3px 15px;
+                    font-size: 12px;
+                    font-weight: normal;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    margin-right: 10px;
+                }
+            }
+        }
+        
+        .modal-footer {
+            border-top: none;
+            text-align: initial;
+            padding: 0 28px 27px 28px;
+
+            .button-upload {
+                float: right;
+                @include confirm-button;
+            }
+
+            .button-cancel {
+                @include cancel-button;
+                margin-right: 8px;
+            }
+            
+            .button-upload, .button-cancel {
+                padding: 7px 15px 9px 15px;
+                font-size: 14px;
+                border-radius: 20px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}

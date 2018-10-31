@@ -1,0 +1,43 @@
+@import "./../common/style.scss";
+
+.actions-row {
+    float: right;
+    margin-right: 13px;
+
+    .button {
+        font-size: 13px;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: none;
+
+        &:disabled {
+            cursor: auto;
+        }
+    }
+
+    .button-next, .button-submit {
+        padding: 8px 20px 10px 20px;
+        @include confirm-button;
+    }
+
+    .button-next:disabled {
+        background-color: #a0ccff;
+    }
+
+    .button-cancel {
+        padding: 8px 18px 10px 18px;
+        @include cancel-button;
+        margin-right: 8px;
+
+        &:disabled {
+            background-color: #d5d9df;
+        }
+    }
+}
+
+
+
+
+
+
+

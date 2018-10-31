@@ -1,0 +1,28 @@
+@import "./../common/style.scss";
+
+.avatar-details-content {
+    height: 100%;
+    padding: 8px 15px 8px 17px;
+
+    .avatar-title {
+        text-transform: uppercase;
+        margin-right: 15px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $main-font-color;
+    }
+
+    .avatar-description {
+        font-size: 15px;
+    }
+
+    .open-button {
+        @include cancel-button;
+        padding: 8px 15px 10px 15px;
+        font-size: 18px;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 15px;
+        outline: none;
+    }
+}

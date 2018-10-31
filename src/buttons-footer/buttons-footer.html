@@ -1,0 +1,5 @@
+<div class="actions-row">
+    <button ng-disabled="$ctrl.$state.current.name === 'loginDetails'" class="button button-cancel" ng-click="$ctrl.cancel()">Cancel</button> 
+    <button ng-if="$ctrl.nextState" ng-disabled="$ctrl.disabled" class="button button-next" ng-click="$ctrl.onNext(); $ctrl.next()">Next</button>   
+    <button ng-if="!$ctrl.nextState" ng-disabled="$ctrl.disabled" class="button button-submit">Submit</button>   
+</div>

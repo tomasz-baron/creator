@@ -1,0 +1,13 @@
+<div class="ui-view-content">
+    <form name="detailsForm" novalidate class="login-form">
+        <label for="email" class="details-label">Email</label>
+        <input name="email" type="email" class="details-input" ng-model="$ctrl.data.email" required placeholder="Type your email">
+        <label for="password" class="details-label">Password</label>
+        <input name="password" type="password" class="details-input" ng-model="$ctrl.data.password" required placeholder="Type password">
+        <label for="confirmedPassword" class="details-label">Verify password</label>
+        <input name="confirmedPassword" type="password" class="details-input" ng-model="$ctrl.data.confirmedPassword" required placeholder="Verify password" verify-password="$ctrl.data.password">
+    </form>
+    <footer>
+        <buttons-footer next-state="userGroup" disabled="detailsForm.$invalid" on-next="$ctrl.saveDetails()"></buttons-footer>
+    </footer>
+</div>
