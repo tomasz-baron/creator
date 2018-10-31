@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .component('buttonsFooter', {
     controller: ['$state', '$window', function($state, $window) {
         this.$state = $state;

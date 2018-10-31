@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .component('avatarDetails', {
     controller: ['$uibModal', 'UserData', function($uibModal, UserData) {
         const avatar_preview = document.getElementById('avatar-preview');

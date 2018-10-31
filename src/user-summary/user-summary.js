@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .component('userSummary', {
     controller: ['UserData', function(UserData) {
         this.$onInit = () => {

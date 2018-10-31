@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .factory('UserData', function() {
     const userData = {};
 

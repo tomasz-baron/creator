@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .service('Groups', function($http) {
     return {
         getList: () => {

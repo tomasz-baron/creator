@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .component('creatorSummary', {
     controller: ['$state', function($state) {
         this.$state = $state;

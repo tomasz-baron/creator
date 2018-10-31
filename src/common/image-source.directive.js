@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .directive('imageSource', [function () {
     return {
         scope: {

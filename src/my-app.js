@@ -1,4 +1,4 @@
-angular.module('task', ['ui.router', 'ui.bootstrap'])
+angular.module('creator', ['ui.router', 'ui.bootstrap'])
 .component('myApp', {
     controller: ['$state', ($state) => {
         $state.go('loginDetails');

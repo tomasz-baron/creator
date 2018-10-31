@@ -1,4 +1,4 @@
-angular.module('task')
+angular.module('creator')
 .directive('verifyPassword',  function() {
     return {
         require: "ngModel",
