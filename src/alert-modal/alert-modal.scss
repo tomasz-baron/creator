@@ -1,0 +1,45 @@
+@import "./../common/style.scss";
+
+.alert-modal .modal-dialog {
+    width: 300px;
+    height: 200px;
+    margin-top: 100px;
+
+    .modal-content {
+        @include modal-content-shadow;
+        border: none;
+
+        .modal-header {
+            height: 60px;
+            font-size: 20px;
+            padding: 20px 10px 10px 20px;
+            box-shadow: $line-shadow;
+        }
+
+        .modal-body {
+            height: 80px;
+            padding: 15px 28px 10px 20px;
+
+            .description {
+                font-size: 18px;
+                color: $modal-font-color;
+            }
+        }
+
+        .modal-footer {
+            border-top: none;
+            text-align: initial;
+            padding: 0 28px 20px 28px;
+
+            .button-close {
+                float: right;
+                @include confirm-button;
+                padding: 7px 15px 9px 15px;
+                font-size: 14px;
+                border-radius: 20px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}

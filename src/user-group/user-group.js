@@ -3,7 +3,7 @@ angular.module('creator')
     controller: ['UserData', function(UserData) {
         this.$onInit = () => {
             this.value = UserData.getUserGroup();
-        }
+        };
 
         this.saveUserGroup = () => {
             const val = this.value;

@@ -1,14 +1,13 @@
 @import "./../../common/style.scss";
 
-.modal-dialog {
+.avatar-modal .modal-dialog {
     width: 500px;
     height: 290px;
     margin-top: 70px;
 
     .modal-content {
         height: 290px;
-        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.2);
-        box-shadow: 0 5px 15px rgba(0,0,0,.2);
+        @include modal-content-shadow;
         border: none;
 
         .modal-header {
@@ -16,7 +15,6 @@
             font-size: 20px;
             padding: 23px 10px 10px 28px;
             box-shadow: $line-shadow;
-            border: 1px solid #d8d8d8;
         }
         
         .modal-body {
