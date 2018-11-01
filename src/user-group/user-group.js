@@ -11,7 +11,7 @@ angular.module('creator')
                 if (id === +val)
                     return true;
             });
-            UserData.setUserGroup(this.value, group.name);
+            UserData.setUserGroup({id: this.value, name: group.name});
         };
 
     }],

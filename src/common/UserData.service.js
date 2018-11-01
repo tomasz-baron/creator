@@ -10,8 +10,8 @@ angular.module('creator')
         return userData.details ? userData.details : {email: 'TT@o2', password: 'T', confirmedPassword: 'T'};
     };
 
-    const setUserGroup = (id, name) => {
-        userData.userGroup = {id, name};
+    const setUserGroup = (group) => {
+        userData.userGroup = group;
     };
 
     const getUserGroup = () => {
