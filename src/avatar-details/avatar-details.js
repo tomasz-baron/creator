@@ -11,12 +11,13 @@ angular.module('creator')
 
         this.openUploadModal = () => {
             $uibModal.open({
+                openedClass: 'avatar-modal',
                 component: 'avatarModal',
             }).result.then((result) => {
                 this.avatar = result;
                 UserData.setUserAvatar(result);
                 avatar_preview.src = result;
-            });
+            }, (error) => {});
         };
     }],
     templateUrl: 'src/avatar-details/avatar-details.html'

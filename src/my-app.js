@@ -1,8 +1,5 @@
 angular.module('creator', ['ui.router', 'ui.bootstrap'])
 .component('myApp', {
-    controller: ['$state', ($state) => {
-        $state.go('loginDetails');
-    }],
     templateUrl: 'src/my-app.html'
 })
 .config(($stateProvider, $urlServiceProvider) => {
@@ -19,7 +16,11 @@ angular.module('creator', ['ui.router', 'ui.bootstrap'])
             groups: ['$q', 'Groups', ($q, Groups) => {                    
                 return Groups.getList().then(
                     (response) => response.data,
-                    (error) => $q.reject('Don\'t fetch data')
+                    (error) => {
+                        const message = 'List of groups not found. Try again later.';
+                        //alert(message);
+                        return $q.reject(message);
+                    }
                 );
             }]
         }
@@ -33,4 +34,20 @@ angular.module('creator', ['ui.router', 'ui.bootstrap'])
         component: 'userSummary'
     });
 
-});
+})
+
+.run(['$state', '$uibModal', function($state, $uibModal){
+    $state.go('loginDetails');
+    $state.defaultErrorHandler(function(error) {
+        console.log('Error: ', error.detail);
+        $uibModal.open({
+            openedClass: 'alert-modal',
+            component: 'alertModal',
+            resolve: {
+                message: function () {
+                    return error.detail;
+                }
+            }
+        });
+    });
+}]);
