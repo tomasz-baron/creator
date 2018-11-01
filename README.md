@@ -1,8 +1,8 @@
-#Creator Application
+# Creator Application
 
 ### Node.js and Tools
 
-- Get [Node.js][node].
+- Get Node.js
 - Install the tool dependencies: `npm install`
 
 ### Running the Application
