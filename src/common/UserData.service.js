@@ -7,7 +7,7 @@ angular.module('creator')
     };
 
     const getUserDetails = () => {
-        return userData.details ? userData.details : {email: 'TT@o2', password: 'T', confirmedPassword: 'T'};
+        return userData.details ? userData.details : {email: '', password: '', confirmedPassword: ''};
     };
 
     const setUserGroup = (group) => {
@@ -15,7 +15,7 @@ angular.module('creator')
     };
 
     const getUserGroup = () => {
-        return userData.userGroup ? userData.userGroup.id : '1';
+        return userData.userGroup ? userData.userGroup.id : '';
     };
 
     const setUserAvatar = (avatar) => {

@@ -14,12 +14,6 @@ const connect = require('gulp-connect'),
 	});
 });
 
-gulp.task('index', function () {
-	return gulp.src('index.html')
-		.pipe(gulp.dest('./build/'));
-});
-
-
 gulp.task('scripts', function() {
 	return gulp
     	.src(['src/**/*.js'])
@@ -42,5 +36,5 @@ gulp.task('sass', function() {
 });
 
 gulp.task('default', function() {
-  runSequence('clean', 'scripts', 'sass', 'connect');
+  	runSequence('clean', 'scripts', 'sass', 'connect');
 });
