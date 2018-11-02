@@ -32,4 +32,32 @@ describe('LoginDetails Component', function() {
         expect(result).toEqual(userDetails.email);
     });
 
+    it('form should be valid', function() {
+        const result = element[0].getElementsByTagName('form')[0];
+        expect(result.className).toContain('ng-valid');
+    });
+});
+
+describe('LoginDetails Component - invalid data', function() {
+    beforeEach(angular.mock.module('creator'));
+    beforeEach(module('src/login-details/login-details.html'));
+    beforeEach(module('src/buttons-footer/buttons-footer.html'));
+    var element, scope, UserData;
+    const userDetails = {email: 'test@gmail.com', password: '2', confirmedPassword: '22'};
+
+    beforeEach(inject(function($rootScope, $compile, _UserData_){
+        UserData = _UserData_;
+        spyOn(UserData, 'getUserDetails').and.callFake(function() {
+            return userDetails;
+        });
+        scope = $rootScope.$new();
+        element = angular.element('<login-details></login-details>');
+        element = $compile(element)(scope);
+        scope.$apply();
+    }));
+
+    it('form should be valid', function() {
+        const result = element[0].getElementsByTagName('form')[0];
+        expect(result.className).toContain('ng-invalid');
+    });
 });

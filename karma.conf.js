@@ -14,7 +14,8 @@ module.exports = function(config) {
         'build/app.js',
         'test/*.*',
         'src/login-details/login-details.html',
-        'src/buttons-footer/buttons-footer.html'
+        'src/buttons-footer/buttons-footer.html',
+        'src/user-summary/user-summary.html'
       ],
   
       exclude: [],
@@ -22,7 +23,8 @@ module.exports = function(config) {
 
       preprocessors: {
         'src/login-details/login-details.html': 'ng-html2js',
-        'src/buttons-footer/buttons-footer.html':  'ng-html2js'
+        'src/buttons-footer/buttons-footer.html':  'ng-html2js',
+        'src/user-summary/user-summary.html': 'ng-html2js'
       },
       reporters: ['progress'],
       port: 9876,
