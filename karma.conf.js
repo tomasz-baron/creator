@@ -13,13 +13,18 @@ module.exports = function(config) {
         'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
         'build/app.js',
         'test/*.*',
+        'src/login-details/login-details.html',
+        'src/buttons-footer/buttons-footer.html',
+        'src/user-summary/user-summary.html'
       ],
   
       exclude: [],
   
 
       preprocessors: {
-        // 'dev/scripts/directives/loading-modal/loading-modal.html': 'ng-html2js'
+        'src/login-details/login-details.html': 'ng-html2js',
+        'src/buttons-footer/buttons-footer.html':  'ng-html2js',
+        'src/user-summary/user-summary.html': 'ng-html2js'
       },
       reporters: ['progress'],
       port: 9876,

@@ -4,9 +4,10 @@ const connect = require('gulp-connect'),
 	gulp = require('gulp'),
 	babel = require('gulp-babel'),
 	runSequence = require('gulp-run-sequence'),
-    concat = require('gulp-concat');
+	concat = require('gulp-concat'),
+	Server = require('karma').Server;
     
- gulp.task('connect', function() {
+gulp.task('connect', function() {
 	connect.server({
 		port: 8000,
 		livereload: true,
@@ -14,11 +15,9 @@ const connect = require('gulp-connect'),
 	});
 });
 
-gulp.task('index', function () {
-	return gulp.src('index.html')
-		.pipe(gulp.dest('./build/'));
+gulp.task('clean', function() {
+	return del('build');
 });
-
 
 gulp.task('scripts', function() {
 	return gulp
@@ -30,10 +29,6 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('./build'));
 });
 
-gulp.task('clean', function() {
-	return del('build');
-});
-
 gulp.task('sass', function() {
 	return gulp.src('./src/**/*.scss')
 		.pipe(sass().on('error', sass.logError))
@@ -41,6 +36,17 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./build'));
 });
 
+gulp.task('karma', function (done) {
+	new Server({
+	  configFile: __dirname + '/karma.conf.js',
+	  singleRun: true
+	}, done).start();
+});
+
+gulp.task('test', function() {
+	runSequence('clean', 'scripts', 'sass', 'karma');
+});
+
 gulp.task('default', function() {
-  runSequence('clean', 'scripts', 'sass', 'connect');
+  	runSequence('clean', 'scripts', 'sass', 'connect');
 });
