@@ -3,7 +3,7 @@
         <div class="user-group-title">Choose the User Group</div>
         <label for="userGroup" class="user-group-label">User group</label>
         <span class="user-group-description">User Group to add the users to</span>
-        <select class="groups-select" name="userGroup" ng-model="$ctrl.value">
+        <select class="groups-select" id="user-group" name="userGroup" ng-model="$ctrl.value">
             <option value="" disabled hidden>None</option>
             <option ng-repeat="group in $ctrl.groups" value="{{group.id}}">{{group.name}}</option>
         </select>
